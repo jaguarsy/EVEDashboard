@@ -1,0 +1,278 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  color: #f1f0f2;
+  font-size: 12px;
+  background: #292b30;
+}
+
+/*color: #42b983;*/
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  padding: 0;
+}
+
+.page-container {
+  padding: 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.container-left-panel {
+  width: 75px;
+  background: #1b1e21;
+}
+
+.container-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-panel {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 4px;
+}
+
+.circle-btn {
+  -webkit-app-region: no-drag;
+
+  display: block;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #888;
+  transition: background 0.5s ease-in-out;
+}
+
+.close-panel:hover > .circle-btn.circle-btn-danger {
+  background: #c13c3e;
+}
+
+.close-panel:hover > .circle-btn.circle-btn-warning {
+  background: #a87d0f;
+}
+
+.close-panel:hover > .circle-btn.circle-btn-success {
+  background: #088424;
+}
+
+.close-panel:hover > .circle-btn:hover.circle-btn-danger {
+  background: #e98487;
+}
+
+.close-panel:hover > .circle-btn:hover.circle-btn-warning {
+  background: #dbbd77;
+}
+
+.close-panel:hover > .circle-btn:hover.circle-btn-success {
+  background: #8ac893;
+}
+
+.user-panel {
+  padding: 4px 8px;
+
+  .user-photo {
+    display: block;
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #3f464d;
+    width: 59px;
+    height: 59px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 19px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 59px;
+      height: 59px;
+    }
+  }
+}
+
+.top-panel {
+  padding: 12px;
+  -webkit-app-region: drag;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.46);
+}
+
+input.form-control {
+  padding: 0 12px;
+  line-height: 34px;
+  background: #222327;
+  border-radius: 4px;
+  border: solid 1px #1e1e22;
+  width: 200px;
+  color: #ddd;
+  -webkit-app-region: no-drag;
+  user-select: initial;
+}
+
+input.form-control:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3376ba;
+  font-size: 12px;
+
+  &:hover {
+    color: lighten(#3376ba, 10%);
+  }
+}
+
+p {
+  font-size: 12px;
+  margin: 8px 0 12px 0;
+
+  font {
+    font-size: inherit;
+  }
+}
+
+.well {
+  border: solid 1px #222;
+  padding: 12px;
+  border-radius: 6px;
+  background: #35383e;
+  margin-bottom: 12px;
+  -webkit-app-region: no-drag;
+  user-select: initial;
+}
+
+.well:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.title {
+  margin: 8px 0 12px 0;
+  color: #b4adb0;
+}
+
+.menu {
+  padding: 8px;
+
+  .menu-item {
+    display: block;
+    padding: 8px 4px 12px 4px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 26px;
+    line-height: 30px;
+    color: inherit;
+
+    &:hover {
+      background: #141619;
+      color: inherit;
+    }
+  }
+
+}
+
+.col-1,
+.col-2 {
+  padding: 0 15px;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+.btn {
+  transition: background 0.2s ease-in-out;
+  -webkit-app-region: no-drag;
+  user-select: initial;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-primary {
+  background: #647cdc;
+}
+
+.btn-primary:hover {
+  background: #586dbf;
+}
+
+.btn-primary:focus {
+  background: #4c5ea6;
+}
+
+.btn-danger {
+  background: #8c2d2e;
+}
+
+.btn-danger:hover {
+  background: #702526;
+}
+
+.btn-danger:focus {
+  background: #571d1e;
+}
+
+.draggable {
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.un-draggable {
+  -webkit-app-region: no-drag;
+  user-select: initial;
+}
+
+.pull-right {
+  float: right;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.text-indent {
+  text-indent: 20px;
+}
+
+/*
+ *  scroll bar
+ */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+  background-color: #bfbfbf;
+}
